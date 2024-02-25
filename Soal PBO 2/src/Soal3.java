@@ -18,17 +18,14 @@ public class Soal3 {
         System.out.println("Masukkan jam keluar (format: 1 sampai 12):");
         int jamKeluar = input.nextInt();
         
-        // Mengonversi jam masuk dan jam keluar menjadi format 24 jam
         jamMasuk = convertTo24HourFormat(jamMasuk);
         jamKeluar = convertTo24HourFormat(jamKeluar);
-        
-        // Menghitung lama bekerja
+ 
         int lamaBekerja = hitungLamaBekerja(jamMasuk, jamKeluar);
         
         System.out.println("Lama bekerja: " + lamaBekerja + " jam");
     }
-    
-    // Method untuk mengonversi jam ke format 24 jam
+
     public static int convertTo24HourFormat(int jam) {
         if (jam == 12) {
             return 0;
@@ -37,7 +34,6 @@ public class Soal3 {
         }
     }
     
-    // Method untuk menghitung lama bekerja
     public static int hitungLamaBekerja(int jamMasuk, int jamKeluar) {
         if (jamMasuk <= jamKeluar) {
             return jamKeluar - jamMasuk;
